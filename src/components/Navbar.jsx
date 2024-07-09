@@ -39,6 +39,7 @@ const Navbar = () => {
             <a
               key={index}
               className={`text-lg font-semibold ${index === 4 && "ml-32"}`}
+              href={`${index === 2 && "/about"}`}
             >
               {item}
             </a>
