@@ -1,10 +1,25 @@
-const mongoose=require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/ochii")
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
-const userSchema= mongoose.Schema({
-    username:String,
-    email:String,
-    name:String,
-    password:String
-})
-module.exports=mongoose.model('user',userSchema);
+const connect = async () => {
+    try {
+        await mongoose.connect('mongodb://0.0.0.0:27017/ochii');
+    } catch (error) {
+        console.log(error);
+    }
+}
+connect();
+
+const userSchema = mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    username: String,
+    isAdmin: {
+        type: Boolean,
+        default: false
+    }
+});
+
+export default mongoose.model('User', userSchema);

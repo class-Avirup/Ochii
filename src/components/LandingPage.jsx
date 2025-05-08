@@ -26,7 +26,10 @@ const LandingPage = () => {
                     />
                   </motion.div>
                 )}
-                <h1 className=" text-9xl font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold ">
+                <h1
+                  className=" text-9xl font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold "
+                  key={index}
+                >
                   {item}
                 </h1>
               </div>
@@ -39,17 +42,22 @@ const LandingPage = () => {
           "For public and private companies",
           "From the first pitch to IPO",
         ].map((item, index) => (
-          <p className="text-md font-light tracking-tight leading-none">
+          <p
+            className="text-md font-light tracking-tight leading-none"
+            key={index}
+          >
             {item}
           </p>
         ))}
         <div className="start ">
-          <div className="px-4 py-2 border-[1px] border-zinc-600 bg-zinc-900 hover:bg-white   text-white rounded-full hover:text-black font-light font-sm text-capitalize flex items-center gap-3">
-            Start the project
-            <span className="rotate-[45deg]">
-              <FaArrowUpLong />
-            </span>
-          </div>
+          <a href="/Contact">
+            <div className="px-4 py-2 border-[1px] border-zinc-600 bg-zinc-900 hover:bg-white   text-white rounded-full hover:text-black font-light font-sm text-capitalize flex items-center gap-3 cursor-pointer">
+              Start the project
+              <span className="rotate-[45deg]">
+                <FaArrowUpLong />
+              </span>
+            </div>
+          </a>
         </div>
       </div>
     </div> //color of the landing page

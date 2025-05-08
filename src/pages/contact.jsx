@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Form from "../components/form.jsx";
+import Footer from "../components/footer.jsx";
 import { motion } from "framer-motion";
+import Highlight from "../components/highlight.jsx";
 const Contact = () => {
   return (
     <>
@@ -9,7 +11,7 @@ const Contact = () => {
       <div
         data-scroll
         data-scroll-speed="-.3"
-        className=" w-full h-screen bg-white text-black border-t-2 "
+        className=" w-full h-screen bg-black text-white border-t-2  "
       >
         <div className="textStructure mt-52 px-20 font-['impact']">
           {["LET’S START", "A PROJECT TOGETHER"].map((item, index) => {
@@ -29,7 +31,10 @@ const Contact = () => {
                       />
                     </motion.div>
                   )}
-                  <h1 className=" text-8xl tracking-wide font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold ">
+                  <h1
+                    className=" text-8xl tracking-wide font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold "
+                    key={index}
+                  >
                     {item}
                   </h1>
                 </div>
@@ -38,6 +43,20 @@ const Contact = () => {
           })}
         </div>
         <Form />
+        <Highlight />
+        <div
+          data-scroll
+          data-scroll-speed="0.3"
+          className="bg-slate-500 h-[50vh] rounded-2xl"
+        >
+          <div
+            data-scroll
+            data-scroll-speed="0.4"
+            className="bg-slate-300 h-[50vh] rounded-2xl"
+          >
+            <Footer />
+          </div>
+        </div>
       </div>
     </>
   );

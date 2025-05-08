@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div
       data-scroll
-      data-scroll-speed=".6"
-      className="w-full h-screen bg-zinc-200 p-20 flex gap-5 text-zinc-900"
+      data-scroll-speed="0.5"
+      className="w-full h-screen bg-zinc-200 p-20 flex gap-5 text-zinc-900 z-10 rounded-2xl"
     >
       <div className="w-1/2 font-[''] h-full flex flex-col justify-between">
         <div className="headings">

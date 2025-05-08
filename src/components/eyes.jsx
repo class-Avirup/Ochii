@@ -13,7 +13,7 @@ const Eyes = () => {
     });
   });
   return (
-    <div className=" eyes w-full h-screen overflow-hidden flex justify-center items-center bg-zinc-900">
+    <div className=" eyes w-full h-screen overflow-hidden flex justify-center items-center bg-zinc-900 text-white">
       <div
         data-scroll
         data-scroll-speed="-.8"
