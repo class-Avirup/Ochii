@@ -16,8 +16,7 @@ import Admin from "../server/admin.jsx";
 import Error from "./components/error.jsx";
 import Account from "./components/Account.jsx";
 
-// Context
-import {  useAuth } from "../server/auth.jsx";
+
 
 const App = () => {
   // Initialize smooth scrolling
@@ -52,7 +51,8 @@ const App = () => {
 };
 
 const AppRoutes = () => {
-  const { isAuthenticated, isAdmin } = useAuth();
+  const isUser = localStorage.getItem("token");
+  const isAdmin = localStorage.getItem("user");
 
   return (
     <Routes>
@@ -70,13 +70,13 @@ const AppRoutes = () => {
       <Route
         path="/courses"
         element={
-          isAuthenticated ? <Courses /> : <Navigate to="/login" replace />
+          isUser ? <Courses /> : <Navigate to="/login" replace />
         }
       />
       <Route
         path="/cart"
         element={
-          isAuthenticated ? <Account /> : <Navigate to="/login" replace />
+          isUser ? <Account /> : <Navigate to="/login" replace />
         }
       />
       <Route

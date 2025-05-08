@@ -1,24 +1,19 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Power4 } from "gsap/all";
+
+
 const Featured = () => {
-  const [isHovering, setIsHovering] = useState(false);
+  
 
   return (
     <div data-scroll data-scroll-speed="" className=" w-full py-20 ">
       <div className="w-full px-20 border-b-[1px] border-zinc-700 pb-2 mb-20">
         <h1 className="text-6xl font-[] font-thin tracking-tight mb-12">
-          Featured projects
+          Featured courses
         </h1>
       </div>
       <div className="px-20 ">
         <div className="cards w-full flex gap-10 ">
           <div className=" relative card rounded-xl  w-1/2 h-[60vh]  ">
-            <h1 className="absolute left-full  z-[9] text-8xl font-['impact'] -translate-x-1/2 translate-y-1/2 top-1/3 tracking-tight leading-none text-[#CDEA68] flex">
-              {"FYDE".split("").map((item, index) => (
-                <span className="inline-block ">{item}</span>
-              ))}
-            </h1>
+            
             <div className=" rounded-xl w-full h-full">
               <div className="topic flex gap-6 ">
                 <div className="h-3 w-3 bg-white rounded-full mb-16 "></div>
@@ -46,13 +41,7 @@ const Featured = () => {
           </div>
 
           <div className="card rounded-xl relative w-1/2 h-[60vh] ">
-            <h1 className="absolute right-full  z-[9] text-8xl font-['impact'] translate-x-1/2 translate-y-1/2 top-1/3 tracking-tight leading-none text-[#CDEA68]  flex">
-              {"VISE".split("").map((item, index) => (
-                <span initial={{ y: "100%" }} className="inline-block ">
-                  {item}
-                </span>
-              ))}
-            </h1>
+            
             <div className=" rounded-xl w-full h-full ">
               <div className="topic flex gap-6 ">
                 <div className="h-3 w-3 bg-white rounded-full mb-16 "></div>
@@ -78,11 +67,7 @@ const Featured = () => {
       <div className="px-20 mt-40">
         <div className="cards w-full flex gap-10">
           <div className=" relative card rounded-xl  w-1/2 h-[60vh]  ">
-            <h1 className="absolute left-full  z-[9] text-8xl font-['impact'] -translate-x-1/2 translate-y-1/2 top-1/3 tracking-tight leading-none text-[#CDEA68] flex">
-              {"FYDE".split("").map((item, index) => (
-                <span className="inline-block ">{item}</span>
-              ))}
-            </h1>
+            
             <div className=" rounded-xl w-full h-full">
               <div className="topic flex gap-6 ">
                 <div className="h-3 w-3 bg-white rounded-full mb-16"></div>
@@ -107,13 +92,7 @@ const Featured = () => {
           </div>
 
           <div className="card rounded-xl relative w-1/2 h-[60vh] ">
-            <h1 className="absolute right-full  z-[9] text-8xl font-['impact'] translate-x-1/2 translate-y-1/2 top-1/3 tracking-tight leading-none text-[#CDEA68]  flex">
-              {"VISE".split("").map((item, index) => (
-                <span initial={{ y: "100%" }} className="inline-block ">
-                  {item}
-                </span>
-              ))}
-            </h1>
+            
             <div className=" rounded-xl w-full h-full">
               <div className="topic flex gap-6 ">
                 <div className="h-3 w-3 bg-white rounded-full mb-16"></div>

@@ -23,5 +23,5 @@ const signupSchema = z.object({
         .max(25, { message: "Name must be of max 25 characters" })
 });
 
-export { signupSchema };
+export default { signupSchema };
 //validation is not enabled in the project now read the documentations to know and implement the zod validation and middleware is created as well just make sure to integrate it by validate(signupSchema)in router

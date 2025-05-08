@@ -11,4 +11,4 @@ const querySchema = z.object({
     details: z.string({ required_error: "details is a required field" }).trim().min(3, { message: "details must be of three characters" }).max(150, { message: "Details must be of max 150 characters" })
 });
 
-export { querySchema }; // add validation later
+export default { querySchema }; // add validation later

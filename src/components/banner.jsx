@@ -1,9 +1,8 @@
-import React from "react";
-import Eyes from "./eyes";
+
 const Banner = ({ theme, setTheme }) => {
   return (
     <>
-      <Eyes />
+  
       <div
         className={`h-screen  ${
           theme === "dark" ? " bg-slate-900 text-white" : "bg-white text-black"
@@ -13,13 +12,15 @@ const Banner = ({ theme, setTheme }) => {
           <div className="w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-36">
             <div className="space-y-8">
               <h1 className="text-2xl md:text-4xl font-bold">
-                Hello, welcomes here to learn something{" "}
+                Ochii welcomes you here to learn something{" "}
                 <span className="text-lime-400">new everyday!!!</span>
               </h1>
               <p className="text-sm md:text-xl">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-                et totam. Tempora amet atque expedita, quae corrupti totam sed
-                pariatur corporis at veniam est voluptas animi!
+              ✅ Industry-Proven Instructors – Learn from top professionals, not just theorists.</p>
+              <p className="text-sm md:text-xl">✅ Hands-On Projects – Gain real-world skills you can apply immediately.</p>
+              <p className="text-sm md:text-xl">✅ Flexible Learning – Study anytime, anywhere, on any device.</p>
+              <p className="text-sm md:text-xl">✅ Certificates of Completion – Boost your resume with recognized credentials.</p>
+              <p className="text-sm md:text-xl">✅ Supportive Community – Connect with peers and mentors.
               </p>
               <label className="input input-bordered flex items-center gap-2">
                 <svg
@@ -34,7 +35,7 @@ const Banner = ({ theme, setTheme }) => {
                 <input type="text" className="grow" placeholder="Email" />
               </label>
             </div>
-            <button className="btn mt-6 btn-secondary">Get Started</button>
+            <button className="btn mt-6 btn-secondary">Get Notified</button>
           </div>
           <div className=" order-1 w-full mt-20 md:w-1/2">
             <img

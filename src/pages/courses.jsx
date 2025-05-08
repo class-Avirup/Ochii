@@ -1,4 +1,3 @@
-import React from "react";
 import Enavbar from "../components/Enavbar";
 import Efooter from "../components/Efooter";
 import Ecourse from "../components/ecourse";

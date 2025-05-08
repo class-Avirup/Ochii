@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Form from "../components/form.jsx";
 import Footer from "../components/footer.jsx";

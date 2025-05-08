@@ -1,8 +1,5 @@
-import React from "react";
 import Navbar from "../components/Navbar";
-import Highlight from "../components/highlight";
 import Footer from "../components/footer";
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 const Insights = () => {
   const [rotate, setRotate] = useState(0);

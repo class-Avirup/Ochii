@@ -1,7 +1,7 @@
-import React from "react";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import PropTypes from "prop-types";
 const Logoutbtn = ({ logged }) => {
   const [user, setUser] = useState(localStorage.getItem("token"));
 
@@ -9,6 +9,7 @@ const Logoutbtn = ({ logged }) => {
     setUser("");
     <Navigate to="http://localhost:5173/" />;
     toast.success("logout successful!");
+    console.log(user);
     localStorage.setItem("user", false);
     localStorage.setItem("username", "");
     localStorage.setItem("email", "");
@@ -27,3 +28,6 @@ const Logoutbtn = ({ logged }) => {
 };
 
 export default Logoutbtn;
+Logoutbtn.propTypes = {
+  logged: PropTypes.node.isRequired
+};

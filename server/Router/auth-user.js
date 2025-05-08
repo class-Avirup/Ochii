@@ -1,10 +1,7 @@
 import express from 'express';
 import authController from '../Controller/auth-controller.js';
 import authDetailsJwt from "../middlewares/auth-details-jwt.js";
-import validate from "../middlewares/auth-middleware.js";
-import signupSchema from '../validator/auth-validator.js';
-import querySchema from '../validator/form-validation.js';
-import formModel from '../Models/user-query.js';
+
 
 const router = express.Router();
 

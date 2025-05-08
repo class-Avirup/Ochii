@@ -21,7 +21,8 @@ const Cart = () => {
   return (
     <>
       
-      <div className="overflow-x-auto mt-52">
+      <div className="overflow-x-auto mt-52 mb-20">
+        <h1 className="text-5xl text-center mb-8">My Cart</h1>
         <table className="table table-zebra">
           {/* head */}
           <thead>

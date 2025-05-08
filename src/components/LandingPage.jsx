@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 const LandingPage = () => {
@@ -8,11 +7,11 @@ const LandingPage = () => {
       data-scroll-speed="-.3"
       className=" w-full h-screen bg-zinc-900 text-white border-t-2 "
     >
-      <div className="textStructure mt-52 px-20 ">
-        {["We Create", "Eye Opening", "Presentations"].map((item, index) => {
+      <div className="textStructure mt-52 px-10 ">
+        {["The fastest ", "way to", " expertise"].map((item, index) => {
           return (
             <div key={index} className="masker">
-              <div className="flex w-fit items-end overflow-hidden">
+              <div className="flex w-fit items-end ">
                 {index === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
@@ -27,7 +26,7 @@ const LandingPage = () => {
                   </motion.div>
                 )}
                 <h1
-                  className=" text-9xl font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold "
+                  className=" text-8xl font-['bison bold'] uppercase leading-[5.7vw] tracking-none font-semibold "
                   key={index}
                 >
                   {item}
@@ -39,8 +38,8 @@ const LandingPage = () => {
       </div>
       <div className="border-t-[1px] flex justify-between items-center  py-5 px-20 border-zinc-700 mt-32">
         {[
-          "For public and private companies",
-          "From the first pitch to IPO",
+          "➡️ [Browse Courses]",
+          "➡️ [Start Learning for Free]",
         ].map((item, index) => (
           <p
             className="text-md font-light tracking-tight leading-none"

@@ -1,10 +1,8 @@
-
-
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import Enavbar from "../src/components/Enavbar";
 import axios from "axios";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -128,10 +126,9 @@ const Admin = () => {
         body: JSON.stringify(post),
       });
       toast.success("posted successfully!");
-      console.log(response)
+      console.log(response);
     } catch (error) {
       console.log("error");
-      
     }
   };
   // to delete the user from table
@@ -233,7 +230,9 @@ const Admin = () => {
       <div className="h-screen">
         <Enavbar />
         <form onSubmit={handleSubmit}>
-          <div className="mt-52 ">
+
+          <div className="mt-52 border-2 p-8">
+          <h1 className="text-5xl text-center mb-5">Entries</h1>
             <label className="input input-bordered flex items-center gap-2">
               name
               <input
@@ -259,7 +258,7 @@ const Admin = () => {
               />
             </label>
             <label className="input input-bordered flex items-center gap-2">
-              category
+              Instructor
               <input
                 type="text"
                 className="grow"
@@ -292,16 +291,16 @@ const Admin = () => {
               />
             </label>
             <button
-              className="border-2 border-white text-white rounded-full p-2 mt-12  "
+              className="border-2 border-white text-white rounded-full p-2 mt-12   "
               onSubmit={handleSubmit}
             >
               Submit
             </button>
           </div>
         </form>
-        Users
+        <h1 className="text-5xl text-center"> Users</h1>
         <div className="flex flex-col">
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 border-2">
             <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
               <div className="overflow-hidden">
                 <table className="min-w-full text-left text-sm font-light text-surface dark:text-white">
@@ -353,8 +352,8 @@ const Admin = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          Queries
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <h1 className="text-5xl text-center "> Queries</h1>
+          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 border-2 ">
             <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
               <div className="overflow-hidden">
                 <table className="min-w-full text-left text-sm font-light text-surface dark:text-white">
@@ -416,8 +415,8 @@ const Admin = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          Posts
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <h1 className="text-5xl text-center mb-7"> Posts</h1>
+          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 border-2">
             <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
               <div className="overflow-hidden">
                 <table className="min-w-full text-left text-sm font-light text-surface dark:text-white">

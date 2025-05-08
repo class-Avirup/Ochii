@@ -1,5 +1,3 @@
-import React from "react";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logoutbtn from "../../server/logoutbtn";
 const Navbar = () => {
@@ -41,7 +39,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="links flex gap-10 items-center">
-        {["Services", "Contact Us", "About", "Insights", "Profile"].map(
+        {["Services", "Contact Us", "About Me", "Insights", "Profile"].map(
           (item, index) => (
             <a
               key={index}

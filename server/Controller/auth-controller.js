@@ -14,6 +14,8 @@ const home = (req, res) => {
     }
 }
 
+
+
 const register = async (req, res) => {
     try {
         let generateToken = async function () {
@@ -45,6 +47,9 @@ const register = async (req, res) => {
         console.log(error)
     }
 }
+
+
+
 
 const login = async (req, res) => {
     try {
@@ -79,6 +84,11 @@ const login = async (req, res) => {
     }
 }
 
+
+
+
+
+
 const details = async (req, res) => {
     try {
         const userData = req.user;
@@ -89,6 +99,11 @@ const details = async (req, res) => {
         console.log(`error from the route ${error}`)
     }
 }
+
+
+
+
+
 
 const form = async (req, res) => {
     try {
@@ -101,6 +116,11 @@ const form = async (req, res) => {
     }
 }
 
+
+
+
+
+
 const getQuery = async (req, res) => {
     try {
         const formResults = await query.find()
@@ -110,6 +130,10 @@ const getQuery = async (req, res) => {
         res.json({ msg: "error" })
     }
 }
+
+
+
+
 
 const showCourse = async (req, res) => {
     try {
@@ -121,6 +145,9 @@ const showCourse = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+
+
 
 const showUser = async (req, res) => {
     try {
@@ -136,6 +163,9 @@ const showUser = async (req, res) => {
     }
 }
 
+
+
+
 const addCourse = async (req, res) => {
     try {
         const { name, image, title, price, category } = req.body;
@@ -148,6 +178,8 @@ const addCourse = async (req, res) => {
     }
 }
 
+
+
 const addCart = async (req, res) => {
     try {
         const { title } = req.body;
@@ -159,6 +191,8 @@ const addCart = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+
 
 const delUser = async (req, res) => {
     try {
@@ -175,6 +209,8 @@ const delUser = async (req, res) => {
     }
 }
 
+
+
 const delPost = async (req, res) => {
     try {
         const _id = req.params.id;
@@ -189,6 +225,8 @@ const delPost = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+
 
 const delAccount = async (req, res) => {
     try {
@@ -205,6 +243,9 @@ const delAccount = async (req, res) => {
     }
 }
 
+
+
+
 const changeAccount = async (req, res) => {
     try {
         const { name, username, email, password } = req.body;
@@ -219,6 +260,9 @@ const changeAccount = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+
+
 
 const changePost = async (req, res) => {
     try {
@@ -235,6 +279,9 @@ const changePost = async (req, res) => {
     }
 }
 
+
+
+
 const getCart = async (req, res) => {
     try {
         const _id = req.params.id.replace(':', '');
@@ -247,12 +294,16 @@ const getCart = async (req, res) => {
             category: findCourse.category
         })
         res.status(200).json(findCourse)
+        console.log(addtoCart)
     }
     catch (error) {
         console.log(error)
         res.status(500).json(error)
     }
 }
+
+
+
 
 const showCart = async (req, res) => {
     try {
@@ -264,6 +315,9 @@ const showCart = async (req, res) => {
         res.status(500).json(error)
     }
 }
+
+
+
 
 const delCart = async (req, res) => {
     try {
@@ -280,7 +334,10 @@ const delCart = async (req, res) => {
     }
 }
 
-export {
+
+
+
+export default {
     home, register, login, details, form, showCourse, addCourse, addCart,
     showUser, getQuery, delUser, delAccount, changeAccount, delPost,
     changePost, getCart, showCart, delCart

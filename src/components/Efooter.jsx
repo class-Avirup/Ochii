@@ -1,6 +1,5 @@
-import React from "react";
-
-function Efooter({ theme, setTheme }) {
+import PropTypes from "prop-types";
+function Efooter({ theme }) {
   return (
     <>
       <hr />
@@ -12,10 +11,10 @@ function Efooter({ theme, setTheme }) {
         }`}
       >
         <nav className="grid grid-flow-col gap-4 my-6">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover" href="/about">About us</a>
+          <a className="link link-hover" href="/contact">Contact</a>
+          <a className="link link-hover"href="/ecom">Courses</a>
+          <a className="link link-hover"href="/">Press kit</a>
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4 my-4">
@@ -63,3 +62,6 @@ function Efooter({ theme, setTheme }) {
 }
 
 export default Efooter;
+Efooter.propTypes = {
+  theme: PropTypes.node.isRequired
+};

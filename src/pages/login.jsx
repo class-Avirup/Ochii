@@ -1,12 +1,11 @@
-import React from "react";
 import { useState } from "react";
-import { useNavigate, Navigate, useLocation } from "react-router-dom";
-import Logoutbtn from "../../server/logoutbtn";
-import toast, { Toaster } from "react-hot-toast";
+import { useNavigate} from "react-router-dom";
+
+import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 const from = location.state?.from?.pathname || "/";
 const Login = () => {
-  const location = useLocation();
+  
   const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",
@@ -107,14 +106,10 @@ const Login = () => {
         </main>
       </section> */}
       <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
+        <div className="hero-content flex-col">
+          <div className="text-center lg:text-left px-32">
             <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form className="card-body" onSubmit={handleSubmit}>
@@ -124,7 +119,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
+                 
                   className="input input-bordered"
                   required
                   name="email"
@@ -142,7 +137,7 @@ const Login = () => {
                   className="input input-bordered"
                   type="password"
                   name="password"
-                  placeholder="password"
+                  
                   id="password"
                   required
                   autoComplete="off"

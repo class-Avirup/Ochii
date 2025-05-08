@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <div
@@ -50,11 +48,9 @@ const Footer = () => {
           presentations
         </h1>
         <div className="flex flex-col gap-2 mt-10 ">
-          {["Facebook", "Twitter", "Instagram"].map((item, index) => (
-            <a className="text-zinc-900" key={index} href="#">
-              {item}
-            </a>
-          ))}
+        <a href="https://github.com/class-Avirup">GITHUB</a>
+              <a href="https://www.linkedin.com/in/avirup-das-9a6177273/">LINKEDIN</a>
+              <a href="#">TWITTER</a>
         </div>
       </div>
     </div>
