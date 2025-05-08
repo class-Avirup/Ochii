@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const cartTable = ({ item }) => {
   const deleteCart = async (id) => {

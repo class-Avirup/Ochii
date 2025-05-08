@@ -55,11 +55,13 @@ const login = async (req, res) => {
     try {
         let generateToken = async function () {
             try {
-                return jwt.sign({
-                    userId: this._id,
-                    email: this.email,
-                    isAdmin: this.isAdmin
-                }, "shhh", { expiresIn: "30d" })
+              return jwt.sign({
+                    userId: userExist._id,
+                    email: userExist.email,
+                    isAdmin: userExist.isAdmin
+                }, "shhh", { expiresIn: "30d" });
+                
+               
             }
             catch (error) {
                 console.log(error)

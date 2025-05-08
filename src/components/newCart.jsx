@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import NewCart from "./cartTable";
 import { useEffect } from "react";
 import axios from "axios";

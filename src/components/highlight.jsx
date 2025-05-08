@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 const Highlight = () => {
   const [rotate, setRotate] = useState(0);

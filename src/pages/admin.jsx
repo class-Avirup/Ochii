@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import Enavbar from "../src/components/Enavbar";
+import Enavbar from "../components/Enavbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -230,9 +230,8 @@ const Admin = () => {
       <div className="h-screen">
         <Enavbar />
         <form onSubmit={handleSubmit}>
-
           <div className="mt-52 border-2 p-8">
-          <h1 className="text-5xl text-center mb-5">Entries</h1>
+            <h1 className="text-5xl text-center mb-5">Entries</h1>
             <label className="input input-bordered flex items-center gap-2">
               name
               <input

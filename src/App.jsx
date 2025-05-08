@@ -12,11 +12,9 @@ import Register from "./pages/register.jsx";
 import Login from "./pages/login.jsx";
 import Courses from "./pages/courses.jsx";
 import Insights from "./pages/insights.jsx";
-import Admin from "../server/admin.jsx";
+import Admin from "./pages/admin.jsx";
 import Error from "./components/error.jsx";
 import Account from "./components/Account.jsx";
-
-
 
 const App = () => {
   // Initialize smooth scrolling
@@ -32,28 +30,25 @@ const App = () => {
   }, []);
 
   return (
-    
-      <BrowserRouter>
-        <AppRoutes />
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            duration: 4000,
-            style: {
-              background: "#333",
-              color: "#fff",
-            },
-          }}
-        />
-      </BrowserRouter>
-   
+    <BrowserRouter>
+      <AppRoutes />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: "#333",
+            color: "#fff",
+          },
+        }}
+      />
+    </BrowserRouter>
   );
 };
 
 const AppRoutes = () => {
   const isUser = localStorage.getItem("token");
-  const isAdmin = localStorage.getItem("user");
-
+ const isAdmin=localStorage.getItem("user") === "true";
   return (
     <Routes>
       {/* Public Routes */}
@@ -69,15 +64,11 @@ const AppRoutes = () => {
       {/* Protected Routes */}
       <Route
         path="/courses"
-        element={
-          isUser ? <Courses /> : <Navigate to="/login" replace />
-        }
+        element={isUser ? <Courses /> : <Navigate to="/login" replace />}
       />
       <Route
         path="/cart"
-        element={
-          isUser ? <Account /> : <Navigate to="/login" replace />
-        }
+        element={isUser ? <Account /> : <Navigate to="/login" replace />}
       />
       <Route
         path="/admin"

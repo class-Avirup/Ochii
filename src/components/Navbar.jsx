@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Logoutbtn from "../../server/logoutbtn";
+import Logoutbtn from "../pages/logoutbtn";
 const Navbar = () => {
-  const isLoggedIn = localStorage.getItem("user");
-
+  const isLoggedIn = localStorage.getItem("token") !== null;
+console.log("isLoggedIn", isLoggedIn);
   return (
     <div className=" fixed z-[999] w-full px-20 py-8 font-['Neue Montreal'] flex justify-between items-center">
       <div className="logo">
@@ -61,22 +61,18 @@ const Navbar = () => {
       </div>
       <div className="flex gap-9">
         <Link to="/login">
-          <button
-            className={`btn btn-outline  m-0 ${
-              isLoggedIn === "true" && "hidden"
-            } `}
-          >
-            Log In
-          </button>
+        {!isLoggedIn && (
+        <button className="btn btn-outline">
+          Login
+        </button>
+      )}
         </Link>
         <Link to="/register">
-          <button
-            className={`btn btn-outline btn-primary p-2 m-0 ${
-              isLoggedIn === "true" && "hidden"
-            } `}
-          >
-            Sign Up
-          </button>
+        {!isLoggedIn && (
+        <button className="btn btn-outline btn-primary p-2 m-0">
+         SignUp
+        </button>
+      )}
         </Link>
         <Logoutbtn logged={isLoggedIn} />
       </div>

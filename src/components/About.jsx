@@ -20,7 +20,7 @@ const About = () => {
             <div className="w-2 h-2 bg-zinc-100 rounded-full"></div>
           </button>
         </div>
-        <div className="w-1/3 h-[60vh] rounded-2xl    "><img src="public\feature-courses-1.png"/></div>
+        <div className="w-1/3 h-[60vh] rounded-2xl    "><img src="\feature-courses-1.png"/></div>
       </div>
     </div>
   );
