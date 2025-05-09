@@ -1,5 +1,4 @@
-import mongoose from 'mongoose';
-
+const mongoose = require('mongoose');
 
 const connect = async () => {
     try {
@@ -7,7 +6,7 @@ const connect = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 connect();
 
 const userSchema = mongoose.Schema({
@@ -21,4 +20,4 @@ const userSchema = mongoose.Schema({
     }
 });
 
-export default mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

@@ -1,9 +1,10 @@
-import user from '../Models/userModel.js';
-import query from '../Models/user-query.js';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import course from '../Models/userCourses.js';
-import cart from '../Models/userCart.js';
+const user = require('../Models/userModel');
+const query = require('../Models/user-query');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const course = require('../Models/userCourses');
+const cart = require('../Models/userCart');
+
 
 const home = (req, res) => {
     try {
@@ -338,11 +339,26 @@ const delCart = async (req, res) => {
 
 
 
-
-export default {
-    home, register, login, details, form, showCourse, addCourse, addCart,
-    showUser, getQuery, delUser, delAccount, changeAccount, delPost,
-    changePost, getCart, showCart, delCart
+module.exports = {
+    home, 
+    register, 
+    login, 
+    details, 
+    form, 
+    showCourse, 
+    addCourse, 
+    addCart,
+    showUser, 
+    getQuery, 
+    delUser, 
+    delAccount, 
+    changeAccount, 
+    delPost,
+    changePost, 
+    getCart, 
+    showCart, 
+    delCart
 };
+
 
 // Note: The commented pre-save hook remains as is

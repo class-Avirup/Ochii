@@ -1,14 +1,13 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const querySchema= mongoose.Schema({
+const querySchema = mongoose.Schema({
     name: String,
     company: String,
-    goal:String,
-    date:String,
-    budget:String,
-    email:String,
-    details:String
-    
-    
-})
-export default mongoose.model('query',querySchema);
+    goal: String,
+    date: String,
+    budget: String,
+    email: String,
+    details: String
+});
+
+module.exports = mongoose.model('query', querySchema);
