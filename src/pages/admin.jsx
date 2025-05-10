@@ -11,7 +11,9 @@ const Admin = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios("http://localhost:4001/api/auth/adminUser");
+        const res = await axios("https://ochii-3.onrender.com/api/auth/usercart", {
+        withCredentials: true 
+      });
 
         setRuser(res.data);
       } catch (error) {
@@ -24,7 +26,9 @@ const Admin = () => {
   useEffect(() => {
     const getForm = async () => {
       try {
-        const res = await axios("http://localhost:4001/api/auth/query");
+        const res = await axios("https://ochii-3.onrender.com/api/auth/usercart", {
+        withCredentials: true 
+      });
         console.log(res.data);
         setForm(res.data);
       } catch (error) {
@@ -37,7 +41,9 @@ const Admin = () => {
   useEffect(() => {
     const getCard = async () => {
       try {
-        const res = await axios("http://localhost:4001/api/auth/course");
+        const res = await axios("https://ochii-3.onrender.com/api/auth/usercart", {
+        withCredentials: true 
+      });
         console.log(res.data);
         setCard(res.data);
       } catch (error) {
@@ -82,7 +88,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminChangeAccount`,
+        `https://ochii-3.onrender.com/api/auth/adminChangeAccount`,
         {
           method: "POST",
           headers: {
@@ -118,7 +124,7 @@ const Admin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:4001/api/auth/admin`, {
+      const response = await fetch(`https://ochii-3.onrender.com/api/auth/admin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -136,7 +142,7 @@ const Admin = () => {
     console.log(id);
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminDelUser/${id}`,
+        `https://ochii-3.onrender.com/api/auth/adminDelUser/${id}`,
         {
           method: "POST",
           headers: {
@@ -154,7 +160,7 @@ const Admin = () => {
     console.log(id);
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminDelPost/${id}`,
+        `https://ochii-3.onrender.com/api/auth/adminDelPost/${id}`,
         {
           method: "POST",
           headers: {
@@ -173,7 +179,7 @@ const Admin = () => {
     console.log(id);
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminDelAccount/${id}`,
+        `https://ochii-3.onrender.com/api/auth/adminDelAccount/${id}`,
         {
           method: "POST",
           headers: {
@@ -208,7 +214,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminChangePost`,
+        `https://ochii-3.onrender.com/api/auth/adminChangePost`,
         {
           method: "POST",
           headers: {

@@ -7,21 +7,23 @@ import PropTypes from "prop-types";
 import Ecards from "./ecard";
 function Freebook({ theme }) {
   const [freecourse, setFreecourse] = useState([]);
-  useEffect(() => {
-    const getBook = async () => {
-      try {
-        const res = await axios.get("http://localhost:4001/api/auth/course");
+ useEffect(() => {
+  const getBook = async () => {
+    try {
+      const res = await axios.get("https://ochii-3.onrender.com/api/auth/course", {
+        withCredentials: true // Add only if you're using cookies/sessions
+      });
 
-        const data = res.data.filter((data) => data.category === "free");
+      const data = res.data.filter((data) => data.category === "free");
 
-        console.log(data);
-        setFreecourse(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getBook();
-  }, []);
+      console.log(data);
+      setFreecourse(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  getBook();
+}, []);
   // slider description settings for slider from react-slick
   var settings = {
     dots: true,

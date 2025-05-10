@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       console.log("user");
-      const response = await fetch(`http://localhost:4001/api/auth/login`, {
+      const response = await fetch(`https://ochii-3.onrender.com/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

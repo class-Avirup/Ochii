@@ -5,7 +5,7 @@ const cartTable = ({ item }) => {
     console.log(id);
     try {
       const response = await fetch(
-        `http://localhost:4001/api/auth/adminDelCart/${id}`,
+        `https://ochii-3.onrender.com/api/auth/adminDelCart/${id}`,
         {
           method: "POST",
           headers: {

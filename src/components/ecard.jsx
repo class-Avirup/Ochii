@@ -5,7 +5,7 @@ function Ecards({ item }) {
     try {
       console.log(id);
       const response = await fetch(
-        `http://localhost:4001/api/auth/cart/:${id}`,
+        `https://ochii-3.onrender.com/api/auth/cart/:${id}`,
         {
           method: "POST",
           headers: {

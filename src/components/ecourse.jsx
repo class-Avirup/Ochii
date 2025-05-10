@@ -10,17 +10,19 @@ function Ecourse() {
    
      const [course, setCourse] = useState([]);
      useEffect(() => {
-       const getBook = async () => {
-         try {
-           const res = await axios.get("http://localhost:4001/api/auth/course");
-           console.log(res.data);
-           setCourse(res.data);
-         } catch (error) {
-           console.log(error);
-         }
-      };
-      getBook();
-    }, []);
+  const getBook = async () => {
+    try {
+      const res = await axios.get("https://ochii-3.onrender.com/api/auth/course", {
+        withCredentials: true // Include if your API uses cookies/session
+      });
+      console.log(res.data);
+      setCourse(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  getBook();
+}, []);
     
   return (
     <>

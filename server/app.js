@@ -15,8 +15,8 @@ const port = 4001;
 
 // CORS options
 const corsOptions = {
-  origin: 'http://localhost:5173',
-  methods: 'GET,POST,PUT,DELETE',
+  origin: ['https://ochii-42bg.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };
 

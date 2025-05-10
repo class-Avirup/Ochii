@@ -8,7 +8,9 @@ const Cart = () => {
   useEffect(() => {
     const getCart = async () => {
       try {
-        const res = await axios("http://localhost:4001/api/auth/usercart");
+        const res = await axios.get("https://ochii-3.onrender.com/api/auth/usercart", {
+        withCredentials: true 
+      });
 
         setCart(res.data);
       } catch (error) {

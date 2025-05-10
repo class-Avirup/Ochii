@@ -26,7 +26,7 @@ const Register = () => {
 
     // connecting react with express server
     try {
-      const response = await fetch(`http://localhost:4001/api/auth/register`, {
+      const response = await fetch(`https://ochii-3.onrender.com/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
