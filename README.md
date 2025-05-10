@@ -5,3 +5,4 @@
 . move to server folder and install node modules by command(npm install)
 . start the server by typing nodemon app.js(PORT 4001)
 AND the application starts working! (●'◡'●):-D
+FRONTEND:-https://ochii-42bg.vercel.app/
