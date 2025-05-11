@@ -2,9 +2,13 @@ const mongoose = require('mongoose');
 
 const connect = async () => {
     try {
-        await mongoose.connect('mongodb://0.0.0.0:27017/ochii');
+        await mongoose.connect('mongodb+srv://avdishappy:NateBZUejWbcdlS7@cluster0.8pj80yg.mongodb.net/ochii?retryWrites=true&w=majority&appName=Cluster0', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('MongoDB connected!');
     } catch (error) {
-        console.log(error);
+        console.error('MongoDB connection error:', error);
     }
 };
 connect();
